@@ -1,0 +1,5 @@
+AppId: ""
+AppSecret: ""
+EncryptKey: ""
+VerificationToken: ""
+prometheusURL: "http://127.0.0.1:9090/"

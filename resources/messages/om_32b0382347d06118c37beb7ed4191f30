@@ -1,0 +1,120 @@
+{
+  "config": {
+    "wide_screen_mode": true
+  },
+  "header": {
+    "template": "red",
+    "title": {
+      "tag": "plain_text",
+      "content": "触发告警"
+    }
+  },
+  "elements": [
+    {
+      "tag": "div",
+      "fields": [
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**platform:**\nA"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**regioname:**\n服务器名称"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**regionip:**\n10.175.0.40"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**title:**\n服务内存超过5G"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**groupname:**\nxx项目"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**msg:**\n服务内存为6499.58 MB,超过5G"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**name:**\n服务名称"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**StartsAt:**\n2025年01月06日 07时04分01秒"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "action",
+      "actions": [
+        {
+          "tag": "select_static",
+          "placeholder": {
+            "tag": "plain_text",
+            "content": "暂时屏蔽"
+          },
+          "options": [
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽10分钟"
+              },
+              "value": "1"
+            },
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽30分钟"
+              },
+              "value": "2"
+            },
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽1小时"
+              },
+              "value": "3"
+            },
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽24小时"
+              },
+              "value": "4"
+            }
+          ],
+          "value": {
+            "key": "value"
+          }
+        }
+      ]
+    }
+  ]
+}

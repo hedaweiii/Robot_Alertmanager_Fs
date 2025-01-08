@@ -1,0 +1,72 @@
+{
+  "config": {
+    "wide_screen_mode": true
+  },
+  "header": {
+    "template": "red",
+    "title": {
+      "tag": "plain_text",
+      "content": "触发告警"
+    }
+  },
+  "elements": [
+    {
+      "tag": "div",
+      "fields": [
+        {{range $index, $field := .Fields}}{
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**{{.CustomField1}}:**\n{{.CustomField2}}"
+          }
+        }{{if not (last $index $.FieldsLength)}},
+        {{end}}{{end}}
+      ]
+    },
+    {
+      "tag": "action",
+      "actions": [
+        {
+          "tag": "select_static",
+          "placeholder": {
+            "tag": "plain_text",
+            "content": "暂时屏蔽"
+          },
+          "options": [
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽10分钟"
+              },
+              "value": "1"
+            },
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽30分钟"
+              },
+              "value": "2"
+            },
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽1小时"
+              },
+              "value": "3"
+            },
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽24小时"
+              },
+              "value": "4"
+            }
+          ],
+          "value": {
+            "key": "value"
+          }
+        }
+      ]
+    }
+  ]
+}

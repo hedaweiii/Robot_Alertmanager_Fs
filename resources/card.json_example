@@ -1,0 +1,129 @@
+{
+  "config": {
+    "wide_screen_mode": true
+  },
+  "header": {
+    "template": "${color}",
+    "title": {
+      "tag": "plain_text",
+      "content": "[${platform}平台]系统触发告警"
+    }
+  },
+  "elements": [
+    {
+      "tag": "div",
+      "fields": [
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**🕐 开始时间：**\n${startsAt}"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**🔢 服务器ip：**\n${regionip}"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**🔢 服务器名称：**\n${sysregioname}"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**📋 所属项目组：**\n${groupname}"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**📋 服务名称：**\n${regioname}"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**📋 15分钟内累计告警：**\n${count_alert}"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**👤 值班人员：**\n无"
+          }
+        },
+        {
+          "text": {
+            "tag": "lark_md",
+            "content": "**📋 错误内容：**\n<font color='red'>${msg}</font>"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "action",
+      "actions": [
+        {
+          "tag": "select_static",
+          "placeholder": {
+            "tag": "plain_text",
+            "content": "暂时屏蔽"
+          },
+          "options": [
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽10分钟"
+              },
+              "value": "1"
+            },
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽30分钟"
+              },
+              "value": "2"
+            },
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽1小时"
+              },
+              "value": "3"
+            },
+            {
+              "text": {
+                "tag": "plain_text",
+                "content": "屏蔽24小时"
+              },
+              "value": "4"
+            }
+          ],
+          "value": {
+            "key": "value"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "hr"
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "${regionip}|${regioname}"
+      }
+    }
+  ]
+}
